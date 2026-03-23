@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDEAZ | Creative Media Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#050505',
+                        mideaz: '#00F0FF',
+                        accent: '#22C55E'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #050505; color: #fff; overflow-x: hidden; -webkit-user-select: none; user-select: none; }
+        
+        .bg-grid {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, #717171 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover { border-color: #00F0FF; }
+
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Elemento de UI Tático (Igual a imagem 2 de referência) */
+        .mideaz-frame {
+            position: relative;
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            background: #0A0A0A;
+        }
+        .mideaz-frame::after {
+            content: '';
+            position: absolute;
+            top: 10px; right: 10px;
+            width: 8px; h-8px;
+            background: #E6192B;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased bg-grid">
+
+    <nav class="fixed top-0 w-full z-50 py-6 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-8 py-4 rounded-2xl border-white/10">
+            <img src="LOGO-MIDEAS.png" alt="MIDEAZ" class="h-6 md:h-8" onerror="this.outerHTML='<span class=\'font-display font-black text-xl\'>MIDEAZ.<span class=\'text-mideaz\'>C</span></span>'">
+            <a href="https://wa.me/5544991610305" class="bg-white text-black font-black uppercase text-[10px] px-6 py-3 rounded-full hover:bg-mideaz transition-all shadow-[0_0_15px_rgba(255,255,255,0.2)]">Falar com Especialista</a>
+        </div>
+    </nav>
+
+    <section class="pt-48 pb-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-6xl md:text-8xl lg:text-[10rem] font-display font-black leading-[0.8] tracking-tighter text-gradient mb-8 uppercase">
+                Domine sua <br> <span class="text-mideaz" style="text-shadow: 0 0 30px rgba(0,240,255,0.4)">Região</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-medium mb-12">
+                Design premium, tráfego pago regional e conteúdo intencional para atrair clientes reais para o seu espaço.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-8 rounded-3xl">
+                <i data-lucide="crosshair" class="text-mideaz mb-6 w-10 h-10"></i>
+                <h3 class="font-black uppercase text-xl mb-4 leading-tight">Posicionamento</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Otimização estratégica do seu perfil e Google Meu Negócio.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <i data-lucide="palette" class="text-mideaz mb-6 w-10 h-10"></i>
+                <h3 class="font-black uppercase text-xl mb-4 leading-tight">Design Premium</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Fugimos do "post panfleto". Artes que comunicam seriedade.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <i data-lucide="video" class="text-mideaz mb-6 w-10 h-10"></i>
+                <h3 class="font-black uppercase text-xl mb-4 leading-tight">Audiovisual</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Vídeos dinâmicos que mostram a qualidade real do seu serviço.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <i data-lucide="zap" class="text-mideaz mb-6 w-10 h-10"></i>
+                <h3 class="font-black uppercase text-xl mb-4 leading-tight">Tráfego Pago</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Anúncios diários focados na sua região para captar clientes novos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 mb-8">
+            <h2 class="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter">Criativos de <span class="text-mideaz">Vídeos</span></h2>
+        </div>
+        <div id="carrossel-videos" class="flex overflow-x-auto gap-6 px-6 md:px-[calc((100vw-80rem)/2)] pb-12 cursor-grab active:cursor-grabbing scrollbar-hide snap-x snap-mandatory">
+            <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2">
+                <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video1.mp4')">
+                    <video src="img/video1.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                </div>
+            </div>
+            <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2">
+                <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video2.mp4')">
+                    <video src="img/video2.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 mb-8">
+            <h2 class="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter">Artes e <span class="text-mideaz">Criativos</span></h2>
+        </div>
+        <div id="carrossel-artes" class="flex overflow-x-auto gap-6 px-6 md:px-[calc((100vw-80rem)/2)] pb-12 cursor-grab active:cursor-grabbing scrollbar-hide snap-x snap-mandatory">
+            <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2">
+                <div class="h-[498px] md:h-[580px] relative bg-dark-900 cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte1.jpg')">
+                    <img src="img/arte1.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+            <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2">
+                <div class="h-[498px] md:h-[580px] relative bg-dark-900 cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte2.jpg')">
+                    <img src="img/arte2.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 mb-8">
+            <h2 class="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter">Imagens para <span class="text-mideaz">Impressão</span></h2>
+        </div>
+        <div id="carrossel-impressao" class="flex overflow-x-auto gap-6 px-6 md:px-[calc((100vw-80rem)/2)] pb-12 cursor-grab active:cursor-grabbing scrollbar-hide snap-x snap-mandatory">
+            <div class="flex-none w-[320px] md:w-[500px] snap-center mideaz-frame rounded-3xl overflow-hidden p-2">
+                <div class="h-[300px] bg-dark relative rounded-2xl overflow-hidden cursor-pointer" onclick="abrirLightboxImg('img/print1.jpg')">
+                    <img src="img/print1.jpg" draggable="false" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-all">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="py-32 px-6 bg-white/5 diagonal-bg">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-display font-black uppercase text-center mb-20">Planos de <span class="text-mideaz">Escala</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-10 rounded-[40px] border-white/5">
+                    <h3 class="text-2xl font-black uppercase mb-2">Movimento Inicial</h3>
+                    <p class="text-5xl font-black mb-8">R$ 500<span class="text-sm font-normal text-gray-500">/mês</span></p>
+                    <ul class="space-y-4 text-sm text-gray-400 mb-12">
+                        <li>• 4 Artes + 4 Vídeos</li>
+                        <li>• Tráfego Pago Google Ads</li>
+                        <li>• Otimização de Perfil</li>
+                    </ul>
+                    <a href="https://wa.me/5544991610305" class="block w-full py-5 text-center border border-white/10 rounded-2xl font-bold hover:bg-white hover:text-black transition">Contratar</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-[40px] border-mideaz bg-mideaz/5 scale-105 relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-mideaz text-black px-4 py-1 rounded-full text-[10px] font-black uppercase">Mais Vendido</div>
+                    <h3 class="text-2xl font-black uppercase mb-2">Movimento Contínuo</h3>
+                    <p class="text-5xl font-black mb-8 text-mideaz">R$ 800<span class="text-sm font-normal text-gray-500">/mês</span></p>
+                    <ul class="space-y-4 text-sm text-gray-200 mb-12">
+                        <li>• 6 Artes + 6 Vídeos</li>
+                        <li>• Tráfego Pago Google & Meta</li>
+                        <li>• Google Meu Negócio</li>
+                    </ul>
+                    <a href="https://wa.me/5544991610305" class="block w-full py-5 text-center bg-mideaz text-black rounded-2xl font-black uppercase shadow-[0_0_30px_rgba(0,240,255,0.3)] transition">Contratar</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-[40px] border-white/5">
+                    <h3 class="text-2xl font-black uppercase mb-2">Agenda Cheia</h3>
+                    <p class="text-5xl font-black mb-8">R$ 1.100<span class="text-sm font-normal text-gray-500">/mês</span></p>
+                    <ul class="space-y-4 text-sm text-gray-400 mb-12">
+                        <li>• 6 Artes + 6 Vídeos</li>
+                        <li>• Google & Meta Premium</li>
+                        <li>• Funil de Atendimento</li>
+                    </ul>
+                    <a href="https://wa.me/5544991610305" class="block w-full py-5 text-center border border-white/10 rounded-2xl font-bold hover:bg-white hover:text-black transition">Contratar</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 mb-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-card rounded-[40px] p-8 md:p-16 border-mideaz/20 flex flex-col lg:flex-row justify-between items-center gap-12">
+                <div class="max-w-xl text-center lg:text-left">
+                    <span class="text-mideaz font-bold uppercase tracking-widest text-xs">Acesso Digital Exclusivo</span>
+                    <h2 class="text-5xl md:text-7xl font-display font-black uppercase mt-4 mb-6 leading-tight">Landing Page</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Criação de endereço digital premium, 100% otimizado para celular, projetado para converter cliques em agendamentos reais no seu WhatsApp.
+                    </p>
+                </div>
+                <div class="w-full lg:w-auto">
+                    <ul class="space-y-4 text-gray-300 mb-10 text-sm">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-mideaz"></i> Estratégia & Copywriting Persuasivo</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-mideaz"></i> Design Otimizado para Celular</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-mideaz"></i> Pixels de Rastreamento Integrados</li>
+                    </ul>
+                    <a href="https://wa.me/5544991610305" class="block w-full py-6 bg-white text-black text-center font-black uppercase rounded-2xl hover:bg-mideaz transition-all text-xl tracking-tighter">Quero minha LP</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300" onclick="fecharLightbox(event)">
+        <button class="absolute top-8 right-8 text-white"><i data-lucide="x"></i></button>
+        <img id="lightbox-img" src="" class="max-w-[90%] max-h-[90%] hidden rounded-lg shadow-2xl">
+        <video id="lightbox-vid" src="" class="max-w-[90%] max-h-[90%] hidden rounded-lg shadow-2xl" controls></video>
+    </div>
+
+    <footer class="py-20 text-center border-t border-white/10">
+        <img src="LOGO-MIDEAS.png" class="h-6 mx-auto mb-6 opacity-40">
+        <p class="text-[10px] uppercase tracking-[0.3em] opacity-40">&copy; 2026 Mideaz Creative Solutions</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function setupCarousel(id) {
+            const slider = document.getElementById(id);
+            if (!slider) return;
+            let isDown = false; let startX; let scrollLeft;
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true; slider.style.cursor = 'grabbing';
+                startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft;
+            });
+            slider.addEventListener('mouseleave', () => isDown = false);
+            slider.addEventListener('mouseup', () => isDown = false);
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 2;
+                slider.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        setupCarousel('carrossel-videos');
+        setupCarousel('carrossel-artes');
+        setupCarousel('carrossel-impressao');
+
+        function abrirLightboxImg(src) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const vid = document.getElementById('lightbox-vid');
+            vid.classList.add('hidden'); img.src = src; img.classList.remove('hidden');
+            lb.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function abrirLightboxVideo(src) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const vid = document.getElementById('lightbox-vid');
+            img.classList.add('hidden'); vid.src = src; vid.classList.remove('hidden');
+            lb.classList.remove('opacity-0', 'pointer-events-none');
+            vid.play();
+        }
+
+        function fecharLightbox(e) {
+            if(e.target.tagName === 'VIDEO') return;
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('opacity-0', 'pointer-events-none');
+            const vid = document.getElementById('lightbox-vid');
+            vid.pause(); vid.src = "";
+        }
+    </script>
+</body>
+</html>
