@@ -21,9 +21,9 @@
                         display: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
-                        dark: '#000000', // Deep Black como na referência 1
-                        mideaz: '#00F0FF', // Ciano Neon Elétrico
-                        accent: '#E6192B' // Vermelho Pulse
+                        dark: '#000000',
+                        mideaz: '#00F0FF',
+                        accent: '#E6192B'
                     }
                 }
             }
@@ -33,20 +33,17 @@
     <style>
         body { background-color: #000000; color: #fff; overflow-x: hidden; -webkit-user-select: none; user-select: none; }
         
-        /* Grid tático idêntico a referência 1 */
         .bg-grid {
             background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
             background-size: 32px 32px;
         }
 
-        /* Gradiente de texto massivo idêntico a referência 1 */
         .text-gradient {
             background: linear-gradient(180deg, #FFFFFF 0%, #717171 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Estrutura High-Tech Tática (Glow e Bordas finas) */
         .mideaz-frame {
             position: relative;
             background: #080808;
@@ -62,13 +59,13 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Elementos de UI sobre a imagem (Estilo Imagem 1) */
         .ui-overlay {
             position: absolute;
             top: 1.5rem;
             left: 1.5rem;
             display: flex;
-            items-center gap-2;
+            align-items: center;
+            gap: 8px;
             z-index: 20;
             color: #00F0FF;
             font-weight: 900;
@@ -120,45 +117,43 @@
 
     <section id="especialidades" class="py-24 px-6 border-t border-white/5 bg-black/50 relative">
         <div class="absolute inset-0 bg-pattern opacity-[0.03]"></div>
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            <div class="mideaz-frame p-8 rounded-2xl flex flex-col group">
-                <i data-lucide="crosshair" class="text-mideaz mb-6 w-10 h-10 transition-transform group-hover:scale-110"></i>
-                <h3 class="font-black uppercase text-xl mb-4 leading-tight text-white">Posicionamento</h3>
-                <p class="text-gray-600 text-sm leading-relaxed flex-1">Otimização estratégica do seu perfil e Google Meu Negócio.</p>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            <div class="mideaz-frame p-10 md:p-12 rounded-3xl flex flex-col group min-h-[340px]">
+                <i data-lucide="crosshair" class="text-mideaz mb-8 w-14 h-14 transition-transform group-hover:scale-110"></i>
+                <h3 class="font-black uppercase text-2xl mb-4 leading-tight text-white">Posicionamento <br>de Elite</h3>
+                <p class="text-gray-400 text-sm leading-relaxed flex-1">Estruturamos sua marca no digital. Otimização avançada de perfil e Google Meu Negócio para você ser a autoridade inquestionável na sua área.</p>
                 <div class="h-1 w-12 bg-mideaz/30 mt-6 group-hover:w-full transition-all"></div>
             </div>
-            <div class="mideaz-frame p-8 rounded-2xl flex flex-col group">
-                <i data-lucide="palette" class="text-mideaz mb-6 w-10 h-10 transition-transform group-hover:scale-110"></i>
-                <h3 class="font-black uppercase text-xl mb-4 leading-tight text-white">Design Premium</h3>
-                <p class="text-gray-600 text-sm leading-relaxed flex-1">Fugimos do "post panfleto". Artes que comunicam seriedade.</p>
+            <div class="mideaz-frame p-10 md:p-12 rounded-3xl flex flex-col group min-h-[340px]">
+                <i data-lucide="palette" class="text-mideaz mb-8 w-14 h-14 transition-transform group-hover:scale-110"></i>
+                <h3 class="font-black uppercase text-2xl mb-4 leading-tight text-white">Design de <br>Alto Impacto</h3>
+                <p class="text-gray-400 text-sm leading-relaxed flex-1">Chega de "post panfleto". Criamos identidades e artes premium que transmitem valor, autoridade e geram desejo imediato no seu cliente.</p>
                 <div class="h-1 w-12 bg-mideaz/30 mt-6 group-hover:w-full transition-all"></div>
             </div>
-            <div class="mideaz-frame p-8 rounded-2xl flex flex-col group">
-                <i data-lucide="video" class="text-mideaz mb-6 w-10 h-10 transition-transform group-hover:scale-110"></i>
-                <h3 class="font-black uppercase text-xl mb-4 leading-tight text-white">Audiovisual</h3>
-                <p class="text-gray-600 text-sm leading-relaxed flex-1">Vídeos dinâmicos que mostram a qualidade real do seu serviço.</p>
+            <div class="mideaz-frame p-10 md:p-12 rounded-3xl flex flex-col group min-h-[340px]">
+                <i data-lucide="video" class="text-mideaz mb-8 w-14 h-14 transition-transform group-hover:scale-110"></i>
+                <h3 class="font-black uppercase text-2xl mb-4 leading-tight text-white">Audiovisual <br>Estratégico</h3>
+                <p class="text-gray-400 text-sm leading-relaxed flex-1">Captação e edição de Reels altamente dinâmicos. Vídeos pensados para reter a atenção e mostrar a excelência absurda do seu serviço.</p>
                 <div class="h-1 w-12 bg-mideaz/30 mt-6 group-hover:w-full transition-all"></div>
             </div>
-            <div class="mideaz-frame p-8 rounded-2xl flex flex-col group">
-                <i data-lucide="zap" class="text-mideaz mb-6 w-10 h-10 transition-transform group-hover:scale-110"></i>
-                <h3 class="font-black uppercase text-xl mb-4 leading-tight text-white">Tráfego Pago</h3>
-                <p class="text-gray-600 text-sm leading-relaxed flex-1">Anúncios diários focados na sua região para captar clientes novos.</p>
+            <div class="mideaz-frame p-10 md:p-12 rounded-3xl flex flex-col group min-h-[340px]">
+                <i data-lucide="zap" class="text-mideaz mb-8 w-14 h-14 transition-transform group-hover:scale-110"></i>
+                <h3 class="font-black uppercase text-2xl mb-4 leading-tight text-white">Tráfego <br>Regional Extremo</h3>
+                <p class="text-gray-400 text-sm leading-relaxed flex-1">Anúncios agressivos no Google e Meta Ads focados exatamente no seu CEP. Trazemos clientes qualificados chamando no WhatsApp todos os dias.</p>
                 <div class="h-1 w-12 bg-mideaz/30 mt-6 group-hover:w-full transition-all"></div>
             </div>
         </div>
     </section>
 
     <section id="videos" class="py-24 relative overflow-hidden border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end gap-6">
-            <h2 class="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.8]">Criativos de <br><span class="text-mideaz">Vídeos</span></h2>
-            <p class="text-mideaz text-xs font-black uppercase tracking-widest flex items-center gap-3"><i data-lucide="network" class="w-5 h-5"></i> ECOSSISTEMA MIDEAZ</p>
+        <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col items-center text-center gap-4">
+            <p class="text-mideaz text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2"><i data-lucide="network" class="w-4 h-4"></i> ECOSSISTEMA MIDEAZ</p>
+            <h2 class="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.9]">Criativos de <br><span class="text-mideaz">Vídeos</span></h2>
         </div>
         <div id="carrossel-videos" class="flex overflow-x-auto gap-6 px-6 md:px-[calc((100vw-80rem)/2)] pb-12 cursor-grab active:cursor-grabbing scrollbar-hide snap-x snap-mandatory">
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <div class="ui-overlay"><span class="rec-dot"></span> REC</div>
                 <i data-lucide="focus" class="absolute top-6 right-6 w-5 h-5 text-mideaz opacity-40 z-20"></i>
-                <i data-lucide="square" class="absolute bottom-6 left-6 w-5 h-5 text-mideaz opacity-40 z-20"></i>
-                <div class="absolute bottom-6 right-6 z-20 text-mideaz font-black text-[10px] uppercase tracking-widest opacity-60">1080 x 1920</div>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video1.mp4')">
                     <video src="img/video1.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
                     <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz fill-mideaz opacity-80"></i></div>
@@ -182,57 +177,56 @@
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <div class="ui-overlay"><span class="rec-dot"></span> REC</div>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video4.mp4')">
-                    <video src="img/video4.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                    <video src="img/video4.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz fill-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <div class="ui-overlay"><span class="rec-dot"></span> REC</div>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video5.mp4')">
-                    <video src="img/video5.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                    <video src="img/video5.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz fill-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <div class="ui-overlay"><span class="rec-dot"></span> REC</div>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video6.mp4')">
-                    <video src="img/video6.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                    <video src="img/video6.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz fill-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <div class="ui-overlay"><span class="rec-dot"></span> REC</div>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video7.mp4')">
-                    <video src="img/video7.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                    <video src="img/video7.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz fill-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <div class="ui-overlay"><span class="rec-dot"></span> REC</div>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video8.mp4')">
-                    <video src="img/video8.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                    <video src="img/video8.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz fill-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <div class="ui-overlay"><span class="rec-dot"></span> REC</div>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxVideo('img/video9.mp4')">
-                    <video src="img/video9.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz/50"></i></div>
+                    <video src="img/video9.mp4" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" muted loop playsinline onmouseover="this.play()" onmouseout="this.pause()"></video>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="play" class="w-16 h-16 text-mideaz fill-mideaz opacity-80"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="criativos" class="py-24 relative border-t border-white/5 bg-black/30">
-        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end gap-6">
-            <h2 class="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.8]">Artes e <br><span class="text-mideaz">Criativos</span></h2>
-            <p class="text-mideaz text-xs font-black uppercase tracking-widest flex items-center gap-3"><i data-lucide="image" class="w-5 h-5"></i> DESIGN DE ALTO IMPACTO</p>
+        <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col items-center text-center gap-4">
+            <p class="text-mideaz text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> DESIGN DE ALTO IMPACTO</p>
+            <h2 class="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.9]">Artes e <br><span class="text-mideaz">Criativos</span></h2>
         </div>
         <div id="carrossel-artes" class="flex overflow-x-auto gap-6 px-6 md:px-[calc((100vw-80rem)/2)] pb-12 cursor-grab active:cursor-grabbing scrollbar-hide snap-x snap-mandatory">
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
                 <i data-lucide="focus" class="absolute top-6 right-6 w-5 h-5 text-mideaz opacity-40 z-20 transition-opacity group-hover:opacity-100"></i>
-                <i data-lucide="target" class="absolute top-6 left-6 w-5 h-5 text-mideaz opacity-40 z-20"></i>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte1.jpg')">
                     <img src="img/arte1.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100">
                     <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="zoom-in" class="w-16 h-16 text-mideaz opacity-80"></i></div>
@@ -246,38 +240,47 @@
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
+                <i data-lucide="focus" class="absolute top-6 right-6 w-5 h-5 text-mideaz opacity-40 z-20 transition-opacity group-hover:opacity-100"></i>
                 <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte3.jpg')">
                     <img src="img/arte3.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100">
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="zoom-in" class="w-16 h-16 text-mideaz opacity-80"></i></div>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="zoom-in" class="w-16 h-16 text-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
-                <div class="h-[498px] md:h-[580px] relative bg-dark-900 cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte4.jpg')">
-                    <img src="img/arte4.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                <i data-lucide="focus" class="absolute top-6 right-6 w-5 h-5 text-mideaz opacity-40 z-20 transition-opacity group-hover:opacity-100"></i>
+                <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte4.jpg')">
+                    <img src="img/arte4.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="zoom-in" class="w-16 h-16 text-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
-                <div class="h-[498px] md:h-[580px] relative bg-dark-900 cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte5.jpg')">
-                    <img src="img/arte5.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                <i data-lucide="focus" class="absolute top-6 right-6 w-5 h-5 text-mideaz opacity-40 z-20 transition-opacity group-hover:opacity-100"></i>
+                <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte5.jpg')">
+                    <img src="img/arte5.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="zoom-in" class="w-16 h-16 text-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
-                <div class="h-[498px] md:h-[580px] relative bg-dark-900 cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte6.jpg')">
-                    <img src="img/arte6.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                <i data-lucide="focus" class="absolute top-6 right-6 w-5 h-5 text-mideaz opacity-40 z-20 transition-opacity group-hover:opacity-100"></i>
+                <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte6.jpg')">
+                    <img src="img/arte6.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="zoom-in" class="w-16 h-16 text-mideaz opacity-80"></i></div>
                 </div>
             </div>
             <div class="flex-none w-[280px] md:w-[350px] snap-center mideaz-frame rounded-[32px] overflow-hidden p-2 group relative">
-                <div class="h-[498px] md:h-[580px] relative bg-dark-900 cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte7.jpg')">
-                    <img src="img/arte7.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                <i data-lucide="focus" class="absolute top-6 right-6 w-5 h-5 text-mideaz opacity-40 z-20 transition-opacity group-hover:opacity-100"></i>
+                <div class="h-[498px] md:h-[580px] relative bg-black cursor-pointer rounded-[26px] overflow-hidden" onclick="abrirLightboxImg('img/arte7.jpg')">
+                    <img src="img/arte7.jpg" draggable="false" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="zoom-in" class="w-16 h-16 text-mideaz opacity-80"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="impressao" class="py-24 relative border-t border-white/5 bg-black/60">
-        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end gap-6">
-            <h2 class="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.8]">Papelaria & <br><span class="text-mideaz">Impressão</span></h2>
-            <p class="text-mideaz text-xs font-black uppercase tracking-widest flex items-center gap-3"><i data-lucide="printer" class="w-5 h-5"></i> IDENTIDADE PREMIUM</p>
+        <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col items-center text-center gap-4">
+            <p class="text-mideaz text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2"><i data-lucide="printer" class="w-4 h-4"></i> IDENTIDADE PREMIUM</p>
+            <h2 class="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter text-gradient leading-[0.9]">Papelaria & <br><span class="text-mideaz">Impressão</span></h2>
         </div>
         <div id="carrossel-impressao" class="flex overflow-x-auto gap-6 px-6 md:px-[calc((100vw-80rem)/2)] pb-12 cursor-grab active:cursor-grabbing scrollbar-hide snap-x snap-mandatory">
             <div class="flex-none w-[320px] md:w-[500px] snap-center mideaz-frame rounded-3xl overflow-hidden p-2 group">
@@ -366,7 +369,7 @@
     </section>
 
     <section id="landing-page" class="py-24 px-6 mb-20 relative">
-        <div class="absolute inset-0 bg-mideazOpacity opacity-[0.03] blur-[150px]"></div>
+        <div class="absolute inset-0 bg-mideaz opacity-[0.03] blur-[150px]"></div>
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="mideaz-frame rounded-[40px] p-10 md:p-16 border-mideaz/20 flex flex-col lg:flex-row justify-between items-center gap-12 bg-black/50 backdrop-blur-lg relative">
                 <div class="max-w-xl text-center lg:text-left flex-1">
@@ -389,7 +392,7 @@
     </section>
 
     <div id="lightbox" class="fixed inset-0 z-[200] bg-black/95 backdrop-blur-lg flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300" onclick="fecharLightbox(event)">
-        <button class="absolute top-8 right-8 text-white glass p-3 rounded-full hover:bg-red-600 transition-all"><i data-lucide="x" class="w-6 h-6"></i></button>
+        <button class="absolute top-8 right-8 text-white p-3 rounded-full hover:bg-red-600 transition-all"><i data-lucide="x" class="w-6 h-6"></i></button>
         <img id="lightbox-img" src="" class="max-w-[90%] max-h-[90%] hidden rounded-2xl border-4 border-white/5 mideaz-frame">
         <video id="lightbox-vid" src="" class="max-w-[90%] max-h-[90%] hidden rounded-2xl border-4 border-white/5 mideaz-frame" controls></video>
     </div>
@@ -405,7 +408,6 @@
     <script>
         lucide.createIcons();
 
-        // SISTEMA DE ARRASTAR DO CARROSSEL (MESMA ESTRUTURA DO PORTFÓLIO, MANTIDO PARA TODOS OS 3)
         function setupCarousel(id) {
             const slider = document.getElementById(id);
             if (!slider) return;
@@ -431,7 +433,6 @@
         setupCarousel('carrossel-artes');
         setupCarousel('carrossel-impressao');
 
-        // SISTEMA DO LIGHTBOX (MESMA ESTRUTURA DO PORTFÓLIO, MANTIDO)
         function abrirLightboxImg(src) {
             const lb = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
