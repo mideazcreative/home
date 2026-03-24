@@ -21,7 +21,7 @@
                         display: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
-                        dark: '#180E30',
+                        dark: '#000000', /* Fundo 100% Preto */
                         brand: '#185457', 
                         light: '#E4E4E4',
                     }
@@ -31,7 +31,7 @@
     </script>
 
     <style>
-        body { background-color: #180E30; color: #E4E4E4; overflow-x: hidden; }
+        body { background-color: #000000; color: #E4E4E4; overflow-x: hidden; }
         
         .bg-grid {
             background-image: linear-gradient(to right, rgba(228,228,228,0.03) 1px, transparent 1px),
@@ -68,7 +68,7 @@
         .mideaz-frame {
             position: relative;
             border: 1px solid rgba(24, 84, 87, 0.3); 
-            background: rgba(24, 14, 48, 0.6);
+            background: rgba(0, 0, 0, 0.6); /* Fundo preto transparente */
             backdrop-filter: blur(8px);
             transition: all 0.3s ease;
         }
@@ -115,7 +115,7 @@
     <div class="relative z-10 bg-grid min-h-screen">
         
         <nav class="fixed top-0 w-full z-50 py-6 px-6">
-            <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-8 py-4 rounded-2xl">
+            <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-8 py-4 rounded-2xl bg-dark/50">
                 <img src="LOGO-MIDEAS.png" alt="MIDEAZ" class="h-6 md:h-8">
                 <a href="https://wa.me/5544991610305" class="bg-light text-dark font-black uppercase text-[10px] md:text-xs px-6 py-3 rounded-full hover:bg-brand hover:text-light transition-all duration-300 shadow-lg">
                     Falar com a Mideaz
@@ -140,7 +140,7 @@
             </div>
         </section>
 
-        <section class="py-24 px-6 border-t border-light/5 bg-dark/40 relative">
+        <section class="py-24 px-6 border-t border-light/5 bg-dark relative">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-display font-black uppercase tracking-tighter text-gradient mb-4">Onde estamos <span class="text-neon">hoje?</span></h2>
@@ -260,7 +260,7 @@
             </div>
         </section>
 
-        <section id="criativos" class="py-24 relative border-t border-light/5 bg-dark/30">
+        <section id="criativos" class="py-24 relative border-t border-light/5 bg-dark">
             <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col items-center text-center gap-4">
                 <div class="text-light/80 bg-brand/20 border border-brand/30 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center justify-center gap-2 mb-2">
                     <i data-lucide="image" class="w-4 h-4 text-light"></i> ESTÉTICA PREMIUM
@@ -315,7 +315,7 @@
             </div>
         </section>
 
-        <section id="impressao" class="py-24 relative border-t border-light/5 bg-dark/60">
+        <section id="impressao" class="py-24 relative border-t border-light/5 bg-dark">
             <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col items-center text-center gap-4">
                 <div class="text-light/80 bg-brand/20 border border-brand/30 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center justify-center gap-2 mb-2">
                     <i data-lucide="printer" class="w-4 h-4 text-light"></i> IDENTIDADE PREMIUM
@@ -363,7 +363,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                    <div class="mideaz-frame p-12 rounded-[40px] border-light/5 flex flex-col">
+                    <div class="mideaz-frame p-12 rounded-[40px] border-light/5 flex flex-col bg-dark/50">
                         <h4 class="text-xs font-bold text-light/50 uppercase tracking-widest mb-2">Presença Digital</h4>
                         <h3 class="text-3xl font-black uppercase mb-4 text-gradient">Movimento Inicial</h3>
                         <p class="text-sm text-light/70 mb-6 min-h-[40px]">Deixe de parecer amador e comece a ser levado a sério. Para quem precisa começar certo.</p>
@@ -379,7 +379,7 @@
                         <a href="https://wa.me/5544991610305?text=Olá, quero saber mais sobre o plano Movimento Inicial da Mideaz" class="block w-full py-5 rounded-2xl border border-brand/50 text-light text-center font-bold uppercase hover:bg-brand transition-all">Começar</a>
                     </div>
 
-                    <div class="mideaz-frame p-12 rounded-[40px] border-brand/50 bg-dark/20 relative scale-105 shadow-[0_0_50px_rgba(24,84,87,0.3)] flex flex-col">
+                    <div class="mideaz-frame p-12 rounded-[40px] border-brand/50 bg-dark/80 relative scale-105 shadow-[0_0_50px_rgba(24,84,87,0.3)] flex flex-col">
                         <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-light text-dark px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-[0_0_20px_rgba(228,228,228,0.3)]">O Mais Importante</div>
                         <h4 class="text-xs font-bold text-brand uppercase tracking-widest mb-2">Geração de Demanda</h4>
                         <h3 class="text-3xl font-black uppercase mb-4 text-gradient">Movimento Contínuo</h3>
@@ -396,7 +396,7 @@
                         <a href="https://wa.me/5544991610305?text=Olá, quero contratar o plano Movimento Contínuo da Mideaz" class="block w-full py-5 rounded-2xl bg-brand text-light text-center font-black uppercase glow-brand hover:scale-105 transition-all">Selecionar</a>
                     </div>
 
-                    <div class="mideaz-frame p-12 rounded-[40px] border-light/5 flex flex-col">
+                    <div class="mideaz-frame p-12 rounded-[40px] border-light/5 flex flex-col bg-dark/50">
                         <h4 class="text-xs font-bold text-light/50 uppercase tracking-widest mb-2">Máquina de Vendas</h4>
                         <h3 class="text-3xl font-black uppercase mb-4 text-gradient">Agenda Cheia</h3>
                         <p class="text-sm text-light/70 mb-6 min-h-[40px]">Pare de depender do Instagram. Crie um sistema de vendas profissional e previsível.</p>
