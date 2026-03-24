@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>MIDEAZ | Agência de Presença Digital e Tráfego</title>
+    <title>MIDEAZ | D I G I T A L</title>
     <meta name="description" content="Design, vídeo e tráfego pago. Estruturamos sua marca com estética premium para atrair clientes todos os dias.">
     <meta name="keywords" content="tráfego pago, design, edição de vídeo, marketing digital, landing page, agência de marketing">
     
@@ -462,68 +462,66 @@
             </div>
         </footer>
     </div>
-
     <script>
-       <script>
-        // 1. Comando para carregar os ícones assim que o site abrir
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
+    // 1. Comando para carregar os ícones assim que o site abrir
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
 
-            // 2. Inicializa os carrosséis
-            setupCarousel('carrossel-videos');
-            setupCarousel('carrossel-artes');
-            setupCarousel('carrossel-impressao');
+        // 2. Inicializa os carrosséis
+        setupCarousel('carrossel-videos');
+        setupCarousel('carrossel-artes');
+        setupCarousel('carrossel-impressao');
+    });
+
+    // --- FUNÇÕES DO SISTEMA (Não alterar) ---
+
+    function setupCarousel(id) {
+        const slider = document.getElementById(id);
+        if (!slider) return;
+        let isDown = false; 
+        let startX; 
+        let scrollLeft;
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true; slider.style.cursor = 'grabbing';
+            startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft;
         });
+        slider.addEventListener('mouseleave', () => isDown = false);
+        slider.addEventListener('mouseup', () => isDown = false);
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
 
-        // --- FUNÇÕES DO SISTEMA (Não alterar) ---
+    function abrirLightboxImg(src) {
+        const lb = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        const vid = document.getElementById('lightbox-vid');
+        vid.classList.add('hidden'); img.src = src; img.classList.remove('hidden');
+        lb.classList.remove('opacity-0', 'pointer-events-none');
+    }
 
-        function setupCarousel(id) {
-            const slider = document.getElementById(id);
-            if (!slider) return;
-            let isDown = false; 
-            let startX; 
-            let scrollLeft;
-            slider.addEventListener('mousedown', (e) => {
-                isDown = true; slider.style.cursor = 'grabbing';
-                startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft;
-            });
-            slider.addEventListener('mouseleave', () => isDown = false);
-            slider.addEventListener('mouseup', () => isDown = false);
-            slider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - slider.offsetLeft;
-                const walk = (x - startX) * 2;
-                slider.scrollLeft = scrollLeft - walk;
-            });
-        }
+    function abrirLightboxVideo(src) {
+        const lb = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        const vid = document.getElementById('lightbox-vid');
+        img.classList.add('hidden'); vid.src = src; vid.classList.remove('hidden');
+        lb.classList.remove('opacity-0', 'pointer-events-none');
+        vid.play();
+    }
 
-        function abrirLightboxImg(src) {
-            const lb = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            const vid = document.getElementById('lightbox-vid');
-            vid.classList.add('hidden'); img.src = src; img.classList.remove('hidden');
-            lb.classList.remove('opacity-0', 'pointer-events-none');
-        }
-
-        function abrirLightboxVideo(src) {
-            const lb = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            const vid = document.getElementById('lightbox-vid');
-            img.classList.add('hidden'); vid.src = src; vid.classList.remove('hidden');
-            lb.classList.remove('opacity-0', 'pointer-events-none');
-            vid.play();
-        }
-
-        function fecharLightbox(e) {
-            if(e.target.tagName === 'VIDEO') return;
-            const lb = document.getElementById('lightbox');
-            lb.classList.add('opacity-0', 'pointer-events-none');
-            const vid = document.getElementById('lightbox-vid');
-            vid.pause(); vid.src = "";
-        }
-    </script>
+    function fecharLightbox(e) {
+        if(e.target.tagName === 'VIDEO') return;
+        const lb = document.getElementById('lightbox');
+        lb.classList.add('opacity-0', 'pointer-events-none');
+        const vid = document.getElementById('lightbox-vid');
+        vid.pause(); vid.src = "";
+    }
+</script>
 </body>
 </html>
