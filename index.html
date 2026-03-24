@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@900&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com" defer></script>
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://unpkg.com/lucide@latest" ></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -464,7 +464,20 @@
     </div>
 
     <script>
-        lucide.createIcons();
+       <script>
+        // 1. Comando para carregar os ícones assim que o site abrir
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // 2. Inicializa os carrosséis
+            setupCarousel('carrossel-videos');
+            setupCarousel('carrossel-artes');
+            setupCarousel('carrossel-impressao');
+        });
+
+        // --- FUNÇÕES DO SISTEMA (Não alterar) ---
 
         function setupCarousel(id) {
             const slider = document.getElementById(id);
@@ -486,10 +499,6 @@
                 slider.scrollLeft = scrollLeft - walk;
             });
         }
-
-        setupCarousel('carrossel-videos');
-        setupCarousel('carrossel-artes');
-        setupCarousel('carrossel-impressao');
 
         function abrirLightboxImg(src) {
             const lb = document.getElementById('lightbox');
