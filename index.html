@@ -119,11 +119,13 @@
     <div class="max-w-7xl mx-auto flex justify-between items-center glass-card px-6 py-4 rounded-2xl">
         <img src="logo-branca.png" alt="MIDEAZ Logo" class="h-8 md:h-10 object-contain">
         
-        <div class="flex items-center gap-3">
-            <a href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-2 text-light/70 hover:text-brand transition-all duration-300 font-bold uppercase text-[10px] tracking-widest">
-                <i data-lucide="instagram" class="w-5 h-5"></i>
+        <div class="flex items-center gap-4">
+            <!-- Botão Instagram usando a sua imagem -->
+            <a href="https://instagram.com/mideazstudio" target="_blank" rel="noopener noreferrer" class="flex items-center hover:scale-110 transition-all duration-300">
+                <img src="img/instagram.png" alt="Instagram Mideaz" class="w-6 h-6 object-contain">
             </a>
             
+            <!-- Botão Falar com a Mideaz -->
             <a href="https://wa.me/5544991610305" target="_blank" rel="noopener noreferrer" class="bg-light text-dark font-black uppercase text-[10px] md:text-xs px-6 py-3 rounded-full hover:bg-brand hover:text-light transition-all duration-300 shadow-lg">
                 Falar com a Mideaz
             </a>
@@ -467,13 +469,17 @@
             <video id="lightbox-vid" src="" class="max-w-[90%] max-h-[90%] hidden rounded-2xl border-4 border-brand/50 mideaz-frame" controls></video>
         </div>
 
-        <footer class="py-20 text-center border-t border-light/10 relative overflow-hidden bg-dark">
-            <div class="absolute inset-0 bg-brand/5 opacity-[0.1] blur-[100px]"></div>
-            <div class="relative z-10 max-w-7xl mx-auto px-6">
-                <img src="logo-branca.png" alt="MIDEAZ Logo" class="h-16 md:h-20 object-contain mx-auto mb-6 opacity-60">
-                <p class="text-[10px] uppercase tracking-[0.4em] opacity-40 text-light">&copy; 2026 Mideaz S T U D I O | Todos os direitos reservados.</p>
-            </div>
-        </footer>
+       <footer class="py-20 text-center border-t border-light/10">
+    <!-- Ajuste a classe h-24 aqui para aumentar o tamanho -->
+    <img src="logo-branca.png" alt="MIDEAZ Logo" class="h-24 mx-auto mb-6 opacity-60">
+    
+    <a href="https://instagram.com/mideazstudio" target="_blank" class="inline-flex items-center gap-2 text-brand font-bold text-xs uppercase tracking-widest mb-6 hover:text-light transition-all">
+        <img src="img/instagram.png" alt="Instagram Mideaz" class="w-5 h-5 object-contain"> 
+        Acompanhe nosso perfil
+    </a>
+    
+    <p class="text-[10px] uppercase tracking-[0.4em] opacity-40 text-light">&copy; 2026 Mideaz STUDIO | Todos os direitos reservados.</p>
+</footer>
     </div>
     <script>
     // 1. Comando para carregar os ícones assim que o site abrir
